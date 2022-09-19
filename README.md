@@ -5,14 +5,20 @@ I have spent 4 hours to write this project
 We have functionality to 
 
 create/add new book into system POST /api/v1/books
+
 update existing book PUT /api/v1/books/{id}
+
 get existing book from system GET /api/v1/books/{id}
+
 get allbooks from system GET /api/v1/books
+
 delete existing book DELETE /api/v1/books/{id}
+
 
 All Scenarios covered By unis tests
 
 Service layer
+
 givenBook_whenCreate_andParameterNull_thenThrowException
 givenBook_whenCreate_andFoundAfterSave_thenOk
 givenBook_whenUpdate_andParameterNull_thenThrowException
@@ -28,6 +34,7 @@ givenNone_whenGetBooks_andNothingExists_andFoundEmptyList_thenOk
 givenNone_whenGetBooks_andExists_andFoundNonEmptyList_thenOk
 
 Controller layer
+
 givenBookDto_whenCreateBook_thenCreated
 givenBookDto_whenCreateBook_andWrongData_thenBadRequest
 givenBookIdAndBookDto_whenUpdateBook_andNotFound_thenNotFound
